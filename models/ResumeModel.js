@@ -56,7 +56,7 @@ const resumeSchema = new mongoose.Schema({
     address: {
       type: String,
       required: true
-    }
+    },
   },
   summary: {
     type: String,
