@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 const connectDB = require('./Connection');
 const { addData, getData } = require('./controllers/resumeController');
 
 const app = express();
+app.use(cors());
 const port = 3000;
+
 
 // Connect to MongoDB
 app.use(express.json());

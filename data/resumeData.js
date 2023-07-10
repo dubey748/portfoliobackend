@@ -4,7 +4,7 @@ const resumeData = {
     email: "dubeyabhishek748@gmail.com",
     phone: "+91 9453424127",
     address: "KPCL Layout Banglore",
-    linkedin:"https://www.linkedin.com/in/dubey748/"
+    link:"https://www.linkedin.com/in/dubey748/"
   },
   summary:
     "Extremely motivated to constantly develop my skills and grow professionally. I am confident in my ability to come up with interesting ideas for required development needs.",
