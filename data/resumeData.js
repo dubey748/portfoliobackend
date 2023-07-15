@@ -28,7 +28,7 @@ const resumeData = {
   experience: [
     {
       title: "Frontend Engineer",
-      company: "MGM Grand Hospitality Company",
+      company: "MGM Grand Hospitality Company at Java R&D",
       startDate: "2021-09-21",
       endDate: "Continued",
       description:
@@ -36,7 +36,7 @@ const resumeData = {
     },
     {
       title: "Frontend Engineer",
-      company: "Florida Blue Healthcare Delivery",
+      company: "Florida Blue Healthcare Delivery at Java R&D",
       startDate: "2021-01-20",
       endDate: "2021-08-20",
       description:
