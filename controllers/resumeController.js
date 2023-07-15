@@ -26,19 +26,29 @@ const getData = async (req, res) => {
   };
   
 
-/* const updateData = async (req, res) => {
-  try {
-    const response = await axios.put('http://api.example.com/resume', {
-      newData: req.body
-    });
-    res.json(response.data);
-  } catch (error) {
-    console.error('Error updating data:', error);
-    res.sendStatus(500);
-  }
-};
+  const updateData = async (req, res) => {
+    try {
+      const { newData } = req.body;
+  
+      // Assuming the ID of the resume data to be updated is passed in the request body
+      const { _id } = newData;
+  
+      const updatedData = await ResumeModel.findByIdAndUpdate(_id, newData, { new: true });
+  
+      if (!updatedData) {
+        return res.status(404).json({ message: 'Resume data not found' });
+      }
+  
+      res.json(updatedData);
+    } catch (error) {
+      console.error('Error updating data:', error);
+      res.sendStatus(500);
+    }
+  };
+  
+  
 
-const deleteData = async (req, res) => {
+/* const deleteData = async (req, res) => {
   try {
     const response = await axios.delete('http://api.example.com/resume');
     res.json(response.data);
@@ -60,4 +70,5 @@ const postData = async (req, res) => {
   }
 };
  */
-module.exports = { addData, getData};
+module.exports = { addData, getData, updateData};
+ 

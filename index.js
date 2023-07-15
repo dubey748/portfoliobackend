@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./Connection');
-const { addData, getData } = require('./controllers/resumeController');
+const { addData, getData, updateData } = require('./controllers/resumeController');
 
 const app = express();
 app.use(cors());
@@ -14,6 +14,7 @@ connectDB();
 // Add data to the database
 app.post('/data', addData);
 app.get('/resume', getData);
+app.put('/update-resume', updateData);
 
 // Start the server
 app.listen(port, () => {
